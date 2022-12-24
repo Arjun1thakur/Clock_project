@@ -4,7 +4,7 @@ function time(){
     var min = time.getMinutes();
     var sec = time.getSeconds();
     var am_pm= document.getElementById('AM_PM');
-
+    console.log(am_pm)
     var title_set1 = document.getElementById('title_set1');
     var title_set =  document.getElementById('title_set0');
     var main_img = document.getElementById('main_img')
@@ -32,8 +32,18 @@ function time(){
     }else{
         am_pm.innerHTML = 'AM';
     }
+
     if(hour>12){
         hour = hour - 12;
+    }
+    if(hour<=9){
+        hour= '0'+hour;
+    }
+    if(min<=9){
+        min= '0'+min;
+    }
+    if(sec<=9){
+        sec= '0'+sec;
     }
     document.getElementById('hour').innerHTML=hour;
     document.getElementById('min').innerHTML=min;
@@ -59,16 +69,6 @@ function alerm(){
 let alerm_ok=document.getElementById("btn_ok");
 alerm_ok.addEventListener("click", alerm);
 
-// let okok=document.getElementById("btn_ok");
-// okok.submit(function(e) {
-//     e.preventDefault();
-// });
-
 setInterval(()=>{
     time();
 },1000)
-
-// let alerm_ok=document.getElementById('btn_ok');
-// alerm_ok.addEventListener('click',()=>alerm());
-
-// document.getElementById("btn_ok").addEventListener("click",alerm);
