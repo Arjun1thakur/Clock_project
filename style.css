@@ -120,21 +120,23 @@ h1{
 .title_set1 h2{
     margin: 15px;
 }
-/* img{
-    width: 100%;
-    height: 100%;
-} */
 .img{
     background: white;
-    height: 42vh;  
+    height: 46vh;
     margin: 20px 0px; 
+    overflow: hidden;
     border-radius: 5px;
 }
-#main_img{
+/* #main_img {
     background-image: url(./img/Component\ 30\ –\ 1@2x.png);
     width: 100%;
     height: 100%;
     background-size: cover;
+} */
+
+#main_img2{
+    width: 100%;
+    height: 100%;
 }
 .set1{
     justify-content: space-evenly;
@@ -160,14 +162,19 @@ h1{
 select{
     width: 50%;
     border: 1px solid gainsboro;
+    /* box-shadow: 2px 2px 10px rgb(204, 204, 204); */
+    border-radius: 5px;
     color: gray;
-    padding: 10px 5px;
+    padding: 10px;
 }
+/* select:not(:-internal-list-box){
+    border: none;
+    margin: 10px;
+    padding: 10px;
+} */
 option{
     color: gray;
-    margin: 20px;
     border: none;
-    box-shadow: 2px 2px 10px black;
 }
 p{
     color: #3D087B;
@@ -188,7 +195,7 @@ p{
     color: #8A11BF;
 }
 .time_text{
-    font-size: larger;
+    font-size: 22px;
     color: #7d08af;
 }
 .AM_PM{
@@ -205,20 +212,11 @@ p{
 .time span{
     font-size: 22px;
 }
-.Hour::after{
-    content: ':';
-    position: absolute;
-    left:205px;
-    top: 35%;
-}
 #hour,#min,#sec{font-size: 38px;}
-.Min::after{
-    content: ':';
-    position: absolute;
-    left:325px;
-    top: 35%;
+.text_{
+    font-size: 38px;
+    color: #3D087B;
 }
-
 @media (max-width:1200px){
     .title_set{
         height: auto;
