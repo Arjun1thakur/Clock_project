@@ -254,4 +254,7 @@ p{
     .alerm{
         margin: 0px;
     }
+    .img{
+        height:auto;
+    }
 }
